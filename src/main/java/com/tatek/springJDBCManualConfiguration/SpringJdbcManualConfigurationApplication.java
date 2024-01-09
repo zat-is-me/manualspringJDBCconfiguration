@@ -25,7 +25,7 @@ public class SpringJdbcManualConfigurationApplication implements CommandLineRunn
 
 	@Override
 	public void run(String... args) throws Exception{
-		jdbcTemplate.execute("INSERT INTO DEPARTMENT VALUES(50,'Production Forestry')");
+		jdbcTemplate.execute("INSERT INTO DEPARTMENT VALUES(60,'Production Forestry')");
 		System.out.println("\n\n Data is inserted in department table! ");
 		System.out.println("Data source client is: "+ dataSource);
 	}

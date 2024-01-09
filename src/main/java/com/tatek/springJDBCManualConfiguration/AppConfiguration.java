@@ -25,17 +25,16 @@ public class AppConfiguration {
     }
 
     @Bean
+    @Primary
     public DataSource dataSource(){
         DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
         driverManagerDataSource.setUsername(userName);
         driverManagerDataSource.setPassword(password);
         driverManagerDataSource.setUrl(url);
-
         return driverManagerDataSource;
     }
 
     @Bean
-    @Primary
     public DataSource comboPoolDataSource(){
         ComboPooledDataSource dataSource = new ComboPooledDataSource();
         dataSource.setUser(userName);
